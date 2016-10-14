@@ -29,3 +29,6 @@ Thumbs.db
 
 # Distribute eggs and tarball
 distribute-*
+*.tlog
+*.db
+*.opendb

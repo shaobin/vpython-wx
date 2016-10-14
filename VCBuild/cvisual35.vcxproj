@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>cvisual</ProjectName>
+    <ProjectGuid>{6B195417-DC9C-499D-A16E-31FB23D526DF}</ProjectGuid>
+    <RootNamespace>cvisual</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>dlls\</OutDir>
+    <IntDir>.\cvisual\debug-obj\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>dlls\</OutDir>
+    <IntDir>.\cvisual\release-obj\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\include\win32;..\include;%PYTHON3HOME\Lib\site-packages\numpy\core\include;..\dependencies\boost_files;%PYTHON3HOME\include;.;..\dependencies\threadpool\include\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_USRDLL;BOOST_PYTHON_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\cvisual\debug-obj/vpython.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\cvisual\debug-obj/</AssemblerListingLocation>
+      <ObjectFileName>.\cvisual\debug-obj/</ObjectFileName>
+      <ProgramDataBaseFileName>.\cvisual\debug-obj/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <ForcedIncludeFiles>vpython-config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>python35.lib;opengl32.lib;glu32.lib;user32.lib;advapi32.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(ProjectDir)\..\site-packages\visual\cvisual.pyd</OutputFile>
+      <AdditionalLibraryDirectories>libs;%PYTHON3HOME\libs;..\dependencies\boost_files\win_libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>libs/cvisual-debug.pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\include\win32;..\include;%PYTHON3HOME\Lib\site-packages\numpy\core\include;..\dependencies\boost_files;%PYTHON3HOME\include;.;..\dependencies\threadpool\include\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_USRDLL;BOOST_PYTHON_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\cvisual\debug-obj/vpython.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\cvisual\debug-obj/</AssemblerListingLocation>
+      <ObjectFileName>.\cvisual\debug-obj/</ObjectFileName>
+      <ProgramDataBaseFileName>.\cvisual\debug-obj/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <ForcedIncludeFiles>vpython-config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>python35.lib;opengl32.lib;glu32.lib;user32.lib;advapi32.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(ProjectDir)\..\site-packages\visual\cvisual.pyd</OutputFile>
+      <AdditionalLibraryDirectories>libs;%PYTHON3HOME\libs;..\dependencies\boost_files\win_libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>libs/cvisual-debug.pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\include\win32;..\include;%PYTHON3HOME\Lib\site-packages\numpy\core\include;..\dependencies\boost_files;%PYTHON3HOME\include;.;..\dependencies\threadpool\include\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;MSC;BOOST_PYTHON_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\cvisual\release-obj/vpython.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\cvisual\release-obj/</AssemblerListingLocation>
+      <ObjectFileName>.\cvisual\release-obj/</ObjectFileName>
+      <ProgramDataBaseFileName>.\cvisual\release-obj/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <ForcedIncludeFiles>vpython-config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>python35.lib;opengl32.lib;glu32.lib;user32.lib;advapi32.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>$(ProjectDir)\..\site-packages\vis\cvisual.pyd</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>libs;%PYTHON3HOME\libs;..\dependencies\boost_files\win_libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>libs/cvisual-release.pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <OptimizeReferences />
+      <EnableCOMDATFolding />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <SupportUnloadOfDelayLoadedDLL>false</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\include\win32;..\include;%BOOSTHOME%;%PYTHON3HOME%\Lib\site-packages\numpy\core\include;..\dependencies\boost_files;%PYTHON3HOME%\include;.</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>X64;_USRDLL;MSC;BOOST_PYTHON_STATIC_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\cvisual\release-obj/vpython.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\cvisual\release-obj/</AssemblerListingLocation>
+      <ObjectFileName>.\cvisual\release-obj/</ObjectFileName>
+      <ProgramDataBaseFileName>.\cvisual\release-obj/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <ForcedIncludeFiles>vpython-config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>python35.lib;opengl32.lib;glu32.lib;user32.lib;advapi32.lib;gdi32.lib;libboost_python3-vc140-mt-1_62.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>$(ProjectDir)\..\site-packages\visual_common\cvisual.pyd</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%PYTHON3HOME%\libs;..\dependencies\boost_files\win_libs;%BOOSTHOME%\stage\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>libs/cvisual-release.pdb</ProgramDatabaseFile>
+      <SubSystem>NotSet</SubSystem>
+      <OptimizeReferences />
+      <EnableCOMDATFolding />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <SupportUnloadOfDelayLoadedDLL>false</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\core\arrow.cpp" />
+    <ClCompile Include="..\src\core\axial.cpp" />
+    <ClCompile Include="..\src\core\box.cpp" />
+    <ClCompile Include="..\src\core\cone.cpp" />
+    <ClCompile Include="..\src\core\cylinder.cpp" />
+    <ClCompile Include="..\src\core\display_kernel.cpp" />
+    <ClCompile Include="..\src\core\ellipsoid.cpp" />
+    <ClCompile Include="..\src\core\frame.cpp" />
+    <ClCompile Include="..\src\core\label.cpp" />
+    <ClCompile Include="..\src\core\light.cpp" />
+    <ClCompile Include="..\src\core\material.cpp" />
+    <ClCompile Include="..\src\core\mouseobject.cpp" />
+    <ClCompile Include="..\src\core\mouse_manager.cpp" />
+    <ClCompile Include="..\src\core\primitive.cpp" />
+    <ClCompile Include="..\src\core\pyramid.cpp" />
+    <ClCompile Include="..\src\core\rectangular.cpp" />
+    <ClCompile Include="..\src\core\renderable.cpp" />
+    <ClCompile Include="..\src\core\ring.cpp" />
+    <ClCompile Include="..\src\core\sphere.cpp" />
+    <ClCompile Include="..\src\core\util\atomic_queue.cpp" />
+    <ClCompile Include="..\src\core\util\displaylist.cpp" />
+    <ClCompile Include="..\src\core\util\errors.cpp" />
+    <ClCompile Include="..\src\core\util\extent.cpp" />
+    <ClCompile Include="..\src\core\util\gl_extensions.cpp" />
+    <ClCompile Include="..\src\core\util\gl_free.cpp" />
+    <ClCompile Include="..\src\core\util\icososphere.cpp" />
+    <ClCompile Include="..\src\core\util\quadric.cpp" />
+    <ClCompile Include="..\src\core\util\rgba.cpp" />
+    <ClCompile Include="..\src\core\util\shader_program.cpp" />
+    <ClCompile Include="..\src\core\util\texture.cpp" />
+    <ClCompile Include="..\src\core\util\tmatrix.cpp" />
+    <ClCompile Include="..\src\core\util\vector.cpp" />
+    <ClCompile Include="..\src\python\arrayprim.cpp" />
+    <ClCompile Include="..\src\python\convex.cpp" />
+    <ClCompile Include="..\src\python\curve.cpp" />
+    <ClCompile Include="..\src\python\cvisualmodule.cpp" />
+    <ClCompile Include="..\src\python\extrusion.cpp" />
+    <ClCompile Include="..\src\python\faces.cpp" />
+    <ClCompile Include="..\src\python\numeric_texture.cpp" />
+    <ClCompile Include="..\src\python\num_util.cpp" />
+    <ClCompile Include="..\src\python\points.cpp" />
+    <ClCompile Include="..\src\python\scalar_array.cpp" />
+    <ClCompile Include="..\src\python\slice.cpp" />
+    <ClCompile Include="..\src\python\vector_array.cpp" />
+    <ClCompile Include="..\src\python\wrap_arrayobjects.cpp" />
+    <ClCompile Include="..\src\python\wrap_display_kernel.cpp" />
+    <ClCompile Include="..\src\python\wrap_primitive.cpp" />
+    <ClCompile Include="..\src\python\wrap_rgba.cpp" />
+    <ClCompile Include="..\src\python\wrap_vector.cpp" />
+    <ClCompile Include="..\src\win32\get_proc_address.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\arrow.hpp" />
+    <ClInclude Include="..\include\axial.hpp" />
+    <ClInclude Include="..\include\box.hpp" />
+    <ClInclude Include="..\include\cone.hpp" />
+    <ClInclude Include="..\include\config.h" />
+    <ClInclude Include="..\include\cylinder.hpp" />
+    <ClInclude Include="..\include\display_kernel.hpp" />
+    <ClInclude Include="..\include\ellipsoid.hpp" />
+    <ClInclude Include="..\include\frame.hpp" />
+    <ClInclude Include="..\include\label.hpp" />
+    <ClInclude Include="..\include\light.hpp" />
+    <ClInclude Include="..\include\material.hpp" />
+    <ClInclude Include="..\include\mouseobject.hpp" />
+    <ClInclude Include="..\include\mouse_manager.hpp" />
+    <ClInclude Include="..\include\pmap_sphere.hpp" />
+    <ClInclude Include="..\include\primitive.hpp" />
+    <ClInclude Include="..\include\pyramid.hpp" />
+    <ClInclude Include="..\include\python\arrayprim.hpp" />
+    <ClInclude Include="..\include\python\convex.hpp" />
+    <ClInclude Include="..\include\python\curve.hpp" />
+    <ClInclude Include="..\include\python\extrusion.hpp" />
+    <ClInclude Include="..\include\python\faces.hpp" />
+    <ClInclude Include="..\include\python\numeric_texture.hpp" />
+    <ClInclude Include="..\include\python\num_util.hpp" />
+    <ClInclude Include="..\include\python\points.hpp" />
+    <ClInclude Include="..\include\python\scalar_array.hpp" />
+    <ClInclude Include="..\include\python\slice.hpp" />
+    <ClInclude Include="..\include\python\vector_array.hpp" />
+    <ClInclude Include="..\include\python\wrap_vector.hpp" />
+    <ClInclude Include="..\include\rectangular.hpp" />
+    <ClInclude Include="..\include\renderable.hpp" />
+    <ClInclude Include="..\include\ring.hpp" />
+    <ClInclude Include="..\include\sphere.hpp" />
+    <ClInclude Include="..\include\util\atomic_queue.hpp" />
+    <ClInclude Include="..\include\util\displaylist.hpp" />
+    <ClInclude Include="..\include\util\errors.hpp" />
+    <ClInclude Include="..\include\util\extent.hpp" />
+    <ClInclude Include="..\include\util\gl_enable.hpp" />
+    <ClInclude Include="..\include\util\gl_extensions.hpp" />
+    <ClInclude Include="..\include\util\gl_free.hpp" />
+    <ClInclude Include="..\include\util\icososphere.hpp" />
+    <ClInclude Include="..\include\util\quadric.hpp" />
+    <ClInclude Include="..\include\util\rate.hpp" />
+    <ClInclude Include="..\include\util\rgba.hpp" />
+    <ClInclude Include="..\include\util\shader_program.hpp" />
+    <ClInclude Include="..\include\util\sorted_model.hpp" />
+    <ClInclude Include="..\include\util\texture.hpp" />
+    <ClInclude Include="..\include\util\tmatrix.hpp" />
+    <ClInclude Include="..\include\util\vector.hpp" />
+    <ClInclude Include="..\include\vpython-config.h" />
+    <ClInclude Include="..\include\wrap_gl.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VTune\cvisual.vpj" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

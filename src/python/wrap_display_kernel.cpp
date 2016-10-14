@@ -18,6 +18,24 @@
 #include <boost/python/def.hpp>
 #include <boost/python/manage_new_object.hpp>
 
+/* add a patch to boost library to compile with Visual Studio 2015 Update 3*/
+namespace boost
+{
+	template <>
+	inline class cvisual::event const volatile * __cdecl get_pointer<class cvisual::event const volatile>(
+		class cvisual::event const volatile * c)
+	{
+		return c;
+	}
+
+	template <>
+	inline class cvisual::mouse_t const volatile * __cdecl get_pointer<class cvisual::mouse_t const volatile>(
+		class cvisual::mouse_t const volatile * c)
+	{
+		return c;
+	}
+}
+
 namespace cvisual {
 
 // The callback function that is invoked from the display class when

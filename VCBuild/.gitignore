@@ -1,13 +1,12 @@
 cvisual/*.*
 libs/*.*
+/x64/
 /libs/
 *.ncb
 *.suo
-*.sln
 *.htm
 *.idb
 *.pdb
 *.lib
 *.exp
 *.dep
-*.manifest

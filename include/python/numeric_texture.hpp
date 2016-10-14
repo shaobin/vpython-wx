@@ -85,4 +85,14 @@ class numeric_texture : public texture
 
 } } // !namespace cvisual::python
 
+namespace boost
+{
+	template <>
+	inline class cvisual::python::numeric_texture const volatile * __cdecl get_pointer<class cvisual::python::numeric_texture const volatile>(
+		class cvisual::python::numeric_texture const volatile * c)
+	{
+		return c;
+	}
+}
+
 #endif /* VPYTHON_PYTHON_NUMERIC_TEXTURE_HPP */
